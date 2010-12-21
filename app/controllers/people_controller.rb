@@ -1,34 +1,40 @@
 class PeopleController < ApplicationController
   # GET /people
   # GET /people.xml
+  # GET /people.json
   def index
     @people = Person.all
 
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @people }
+      format.json { render :json => @people }
     end
   end
 
   # GET /people/1
   # GET /people/1.xml
+  # GET /people/1.json
   def show
     @person = Person.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @person }
+      format.json { render :json => @person }
     end
   end
 
   # GET /people/new
   # GET /people/new.xml
+  # GET /people/new.json
   def new
     @person = Person.new
 
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @person }
+      format.json { render :json => @person }
     end
   end
 

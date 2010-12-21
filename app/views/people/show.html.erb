@@ -1,39 +1,30 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>F name:</b>
-  <%= @person.f_name %>
-</p>
+<div class="photo">
+<%= image_tag @person.image_url %>
+</div>
 
-<p>
-  <b>L name:</b>
-  <%= @person.l_name %>
-</p>
+<div class="details">
+  <b>Name:</b>
+  <%= @person.f_name + @person.l_name %>
+  <br />
 
-<p>
   <b>Bio:</b>
   <%= @person.bio %>
-</p>
+  <br />
 
-<p>
-  <b>Box number:</b>
+  <b>Box Number:</b>
   <%= @person.box_number %>
-</p>
+  <br />
 
-<p>
   <b>Address:</b>
   <%= @person.address %>
-</p>
+  <br />
 
-<p>
-  <b>Phone number:</b>
+  <b>Phone Number:</b>
   <%= @person.phone_number %>
-</p>
-
-<p>
-  <b>Image url:</b>
-  <%= @person.image_url %>
-</p>
+  <br />
+</div>
 
 
 <%= link_to 'Edit', edit_person_path(@person) %> |
